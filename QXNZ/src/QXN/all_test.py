@@ -2,7 +2,7 @@
 import re, os, math
 import unittest, doctest
 import HTMLTestRunner
-import allcase_list
+from QXN import allcase_list
 
 alltestnames = allcase_list.caselist()
 
@@ -28,7 +28,7 @@ if __name__ == '__main__':
             print_exc()
     print ('Running the tests...')
     
-filename = 'D:\\QXNZ_result_20180517.html'
+filename = 'D:\\QXNZ_result_20180716.html'
 fp = open(filename, 'wb')
 
 runner =HTMLTestRunner.HTMLTestRunner(
