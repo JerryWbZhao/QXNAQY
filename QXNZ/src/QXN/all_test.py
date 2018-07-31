@@ -28,12 +28,12 @@ if __name__ == '__main__':
             print_exc()
     print ('Running the tests...')
     
-filename = 'D:\\QXNZ_result_20180716.html'
+filename = 'D:\\QXNZ_Result_20180716.html'
 fp = open(filename, 'wb')
 
 runner =HTMLTestRunner.HTMLTestRunner(
     stream=fp,
-    title=u'BingoTalk测试报告',
+    title=u'黔西南安全云测试报告',
     description=u'报告描述')
 
 runner.run(suite)
