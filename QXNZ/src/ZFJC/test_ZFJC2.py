@@ -58,7 +58,6 @@ class ZFJC2(unittest.TestCase):
                 driver.find_element_by_xpath("//*[@id='leftMenu']/li[4]/ul/li[1]/a").click()
                 time.sleep(2)
                 #进入现场监督检查
-                driver.find_element_by_xpath("//*[@id='leftMenu']/li[4]/a").click()
                 driver.find_element_by_xpath("//*[@id='leftMenu']/li[4]/ul/li[2]/a").click()
                 time.sleep(2)
                 #进入执法档案
