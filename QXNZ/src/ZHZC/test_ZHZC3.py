@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 import unittest, time, re, os, random
 import HTMLTestRunner
-class ZHZC1(unittest.TestCase):
+class ZHZC3(unittest.TestCase):
     def setUp(self):
         chromedriver = "C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe"
         os.environ["webdriver.chrome.driver"] = chromedriver
@@ -22,15 +22,15 @@ class ZHZC1(unittest.TestCase):
         self.accept_next_alert = True
     
     #政府登录用例
-    def test_ZHZC1(self):
-        u"""生产经营单位注册"""
+    def test_ZHZC3(self):
+        u"""考试培训机构注册"""
         driver = self.driver
         driver.get(self.base_url + "/")
         driver.implicitly_wait(30)
         driver.maximize_window()
         driver.find_element_by_xpath("//*[@id='fm11']/div[4]/a[1]").click()
         time.sleep(2)
-        driver.find_element_by_xpath("//*[@id='btnList']/a[1]").click()
+        driver.find_element_by_xpath("//*[@id='btnList']/a[3]").click()
         time.sleep(2)
         #搜索企业注册与否        
         s=random.randint(100000000000000000,999999999999999999)
@@ -43,10 +43,10 @@ class ZHZC1(unittest.TestCase):
         time.sleep(2)
         driver.find_element_by_xpath("//*[@id='fullName']").click()
         time.sleep(2)
-        driver.find_element_by_xpath("//*[@id='fullName']").send_keys("生产经营单位注册")
+        driver.find_element_by_xpath("//*[@id='fullName']").send_keys("考试培训机构注册")
         driver.find_element_by_xpath("//*[@id='JGLX']/a").click()
         driver.find_element_by_xpath("//*[@id='JGLX']/ul/li[1]/a").click()
-        driver.find_element_by_xpath("//*[@id='shortName']").send_keys("生产")
+        driver.find_element_by_xpath("//*[@id='shortName']").send_keys("考试")
         driver.find_element_by_xpath("//*[@id='contact']").send_keys("单位法人")
         driver.find_element_by_xpath("//*[@id='telephone']").send_keys("13000000000")
         sel1 = driver.find_element_by_xpath("//*[@id='qyxzqh1']")
@@ -83,5 +83,5 @@ class ZHZC1(unittest.TestCase):
         
 if __name__ == "__main__":
     suite = unittest.TestSuite()
-    suite.addTest(ZHZC1("test_ZHZC1"))
+    suite.addTest(ZHZC3("test_ZHZC3"))
     results = unittest.TextTestRunner().run(suite)    

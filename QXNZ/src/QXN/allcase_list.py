@@ -4,15 +4,20 @@ Created on 2018年7月16日
 
 @author: Jerry
 '''
+
 def caselist():
     alltestnames = [
     'QXN.test_Login.login',
-    'QXN.ZFJC.test_ZFJC1.ZFJC1',
-    'QXN.ZFJC.test_ZFJC2.ZFJC2',
-    'QXN.ZFJC.test_ZFJC3.ZFJC3',
-    'QXN.ZFJC.test_ZFJC4.ZFJC4',
-    'QXN.ZFJC.test_ZFJC5.ZFJC5',
-    'QXN.ZFJC.test_ZFJC6.ZFJC6',
+    'ZFJC.test_ZFJC1.ZFJC1',
+    'ZFJC.test_ZFJC2.ZFJC2',
+    'ZFJC.test_ZFJC3.ZFJC3',
+    'ZFJC.test_ZFJC4.ZFJC4',
+    'ZFJC.test_ZFJC5.ZFJC5',
+    'ZFJC.test_ZFJC6.ZFJC6',
+    'ZHZC.test_ZHZC1.ZHZC1',
+    'ZHZC.test_ZHZC2.ZHZC2',
+    'ZHZC.test_ZHZC3.ZHZC3',
+    'ZHZC.test_ZHZC4.ZHZC4',
     
     ]
     print ("read case list success!!")

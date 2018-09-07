@@ -17,7 +17,7 @@ class ZFJC6(unittest.TestCase):
         os.environ["webdriver.chrome.driver"] = chromedriver
         self.driver = webdriver.Chrome(chromedriver)
         self.driver.implicitly_wait(30)
-        self.base_url = "http://202.98.201.114:7070/platform/"
+        self.base_url = "http://127.0.0.1:7070/platform"
         self.verificationErrors = []
         self.accept_next_alert = True
     
