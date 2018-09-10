@@ -9,9 +9,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
-import unittest, time, re, os, random
-import HTMLTestRunner
-class forget(unittest.TestCase):
+import unittest, time, os 
+
+class Forget(unittest.TestCase):
     def setUp(self):
         chromedriver = "C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe"
         os.environ["webdriver.chrome.driver"] = chromedriver
@@ -56,5 +56,5 @@ class forget(unittest.TestCase):
         
 if __name__ == "__main__":
     suite = unittest.TestSuite()
-    suite.addTest(forget("test_forgetPassword"))
+    suite.addTest(Forget("test_forgetPassword"))
     results = unittest.TextTestRunner().run(suite)    

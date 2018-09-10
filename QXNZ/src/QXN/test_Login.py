@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 import unittest, time, re, os
 import HTMLTestRunner
-class login(unittest.TestCase):
+class Login(unittest.TestCase):
     def setUp(self):
         chromedriver = "C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe"
         os.environ["webdriver.chrome.driver"] = chromedriver
@@ -45,5 +45,5 @@ class login(unittest.TestCase):
         
 if __name__ == "__main__":
     suite = unittest.TestSuite()
-    suite.addTest(login("test_Login"))
+    suite.addTest(Login("test_Login"))
     results = unittest.TextTestRunner().run(suite)    

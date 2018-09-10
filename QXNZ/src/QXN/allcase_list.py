@@ -7,7 +7,8 @@ Created on 2018年7月16日
 
 def caselist():
     alltestnames = [
-    'QXN.test_Login.login',
+    'QXN.test_Login.Login',
+    'QXN.test_forgetPassword.Forget',
     'ZFJC.test_ZFJC1.ZFJC1',
     'ZFJC.test_ZFJC2.ZFJC2',
     'ZFJC.test_ZFJC3.ZFJC3',
