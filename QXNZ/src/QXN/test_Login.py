@@ -22,7 +22,7 @@ class login(unittest.TestCase):
         self.accept_next_alert = True
     
     #政府登录用例
-    def test_login(self):
+    def test_Login(self):
         u"""登录用例"""
         driver = self.driver
         driver.get(self.base_url + "/")
@@ -45,5 +45,5 @@ class login(unittest.TestCase):
         
 if __name__ == "__main__":
     suite = unittest.TestSuite()
-    suite.addTest(login("test_login"))
+    suite.addTest(login("test_Login"))
     results = unittest.TextTestRunner().run(suite)    
