@@ -21,7 +21,7 @@ class Login(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    #政府登录用例
+    #登录用例
     def test_Login(self):
         u"""登录用例"""
         driver = self.driver

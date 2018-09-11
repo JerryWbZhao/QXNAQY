@@ -21,7 +21,7 @@ class ZFJC3(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    #政府登录用例
+    #执法检查用例
     def test_ZFJC3(self):
         u"""进入危险化学品企业检查"""
         driver = self.driver

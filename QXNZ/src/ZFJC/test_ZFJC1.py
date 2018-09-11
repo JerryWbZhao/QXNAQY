@@ -21,7 +21,7 @@ class ZFJC1(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    #政府登录用例
+    #执法检查用例
     def test_ZFJC1(self):
         u"""进入煤矿执法检查"""
         driver = self.driver

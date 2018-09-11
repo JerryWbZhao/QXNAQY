@@ -21,7 +21,7 @@ class ZHZC4(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    #政府登录用例
+    #注册用例
     def test_ZHZC4(self):
         u"""应急组织机构注册"""
         driver = self.driver

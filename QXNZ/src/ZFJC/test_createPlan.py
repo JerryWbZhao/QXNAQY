@@ -21,7 +21,7 @@ class createPlan(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    #政府登录用例
+    #创建检查计划用例
     def test_createPlan(self):
         u"""创建检查计划"""
         driver = self.driver

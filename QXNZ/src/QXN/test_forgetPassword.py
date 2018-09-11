@@ -21,7 +21,7 @@ class Forget(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    #政府登录用例
+    #找回密码用例
     def test_forgetPassword(self):
         u"""找回密码"""
         driver = self.driver

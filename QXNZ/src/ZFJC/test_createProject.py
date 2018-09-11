@@ -23,7 +23,7 @@ class createProject(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    #政府登录用例
+    #创建检查方案用例
     def test_createProject(self):
         u"""创建检查方案"""
         driver = self.driver
