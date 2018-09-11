@@ -15,6 +15,7 @@ def caselist():
     'ZFJC.test_ZFJC4.ZFJC4',
     'ZFJC.test_ZFJC5.ZFJC5',
     'ZFJC.test_ZFJC6.ZFJC6',
+    'ZFJC.test_createPlan.createPlan',
     'ZHZC.test_ZHZC1.ZHZC1',
     'ZHZC.test_ZHZC2.ZHZC2',
     'ZHZC.test_ZHZC3.ZHZC3',
