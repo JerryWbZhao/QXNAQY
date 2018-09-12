@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//src/QXN/all_test.py=utf-8
 encoding//src/QXN/allcase_list.py=utf-8
+encoding//src/QXN/runtest_htmltestrunner_autosendemail.py=utf-8
 encoding//src/QXN/test_Login.py=utf-8
 encoding//src/QXN/test_forgetPassword.py=utf-8
 encoding//src/Trash/test_governmentLogin.py=utf-8

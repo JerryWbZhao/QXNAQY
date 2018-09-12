@@ -32,7 +32,7 @@ class Forget(unittest.TestCase):
         driver.implicitly_wait(30)
         #查询企业
         driver.find_element_by_xpath("//*[@id='scjydwjbxx']/a[2]/div/div[1]/input").send_keys("测试")
-        driver.implicitly_wait(30)
+        time.sleep(2)
         driver.find_element_by_xpath("//*[@id='scjydwjbxx']/a[2]/div/div[1]/ul/li[1]").click()
         driver.implicitly_wait(30)
         driver.find_element_by_xpath("//*[@id='startFindPass']").click()
