@@ -34,6 +34,7 @@ class createProject(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='password']").send_keys("123456")
         driver.find_element_by_xpath("//*[@id='fm11']/button").click()
         driver.implicitly_wait(30)
+        
         # 获取当前窗口handle name
         current_window = driver.current_window_handle
         driver.find_element_by_xpath("//*[@id='firstmenu']/li[3]/a").click()
@@ -43,13 +44,16 @@ class createProject(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='leftMenu']/li[3]/ul/li[2]/a").click()
         time.sleep(2)
         driver.find_element_by_xpath("//*[@id='leftMenu']/li[3]/ul/li[2]/ul/li[1]/a").click()
+        
         # 获取所有窗口handle name
         all_windows = driver.window_handles
+        
         # 切换window，如果window不是当前window，则切换到该window
         for window in all_windows:
             if window != current_window:
                 driver.switch_to_window(window)
                 time.sleep(2)
+                
                 #进入现场检查方案
                 driver.find_element_by_xpath("//*[@id='leftMenu']/li[4]/a").click()
                 driver.find_element_by_xpath("//*[@id='leftMenu']/li[4]/ul/li[1]/a").click()
@@ -87,6 +91,7 @@ class createProject(unittest.TestCase):
                 driver.find_element_by_xpath("//*[@id='table_user']/tbody/tr[3]/td[1]/input").click()
                 driver.find_element_by_xpath("//*[@id='user_modal']/div/div/div[3]/button[1]").click()
                 time.sleep(2)
+                
                 #选择检查内容
                 js = "window.scrollTo(0,500)" 
                 driver.execute_script(js)

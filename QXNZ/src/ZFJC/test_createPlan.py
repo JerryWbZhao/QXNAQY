@@ -32,6 +32,7 @@ class createPlan(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='password']").send_keys("123456")
         driver.find_element_by_xpath("//*[@id='fm11']/button").click()
         driver.implicitly_wait(30)
+        
         # 获取当前窗口handle name
         current_window = driver.current_window_handle
         driver.find_element_by_xpath("//*[@id='firstmenu']/li[3]/a").click()
@@ -41,17 +42,21 @@ class createPlan(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='leftMenu']/li[3]/ul/li[2]/a").click()
         time.sleep(2)
         driver.find_element_by_xpath("//*[@id='leftMenu']/li[3]/ul/li[2]/ul/li[1]/a").click()
+        
         # 获取所有窗口handle name
         all_windows = driver.window_handles
+        
         # 切换window，如果window不是当前window，则切换到该window
         for window in all_windows:
             if window != current_window:
                 driver.switch_to_window(window)
                 time.sleep(2)
+                
                 #进入年度检查计划
                 driver.find_element_by_xpath("//*[@id='leftMenu']/li[3]/a").click()
                 driver.find_element_by_xpath("//*[@id='leftMenu']/li[3]/ul/li/a").click()
                 driver.implicitly_wait(30)
+                
                 #创建年度检查计划
                 driver.find_element_by_xpath("//*[@id='btn_add']").click()
                 driver.implicitly_wait(30)
@@ -71,6 +76,7 @@ class createPlan(unittest.TestCase):
                 time.sleep(2)
                 driver.find_element_by_xpath("//*[@id='fileupload']/div[1]/div[1]/span").click()
                 time.sleep(2)
+                
                 #调用upfile.exe上传程序
                 os.system("D:\\upfile.exe")
                 time.sleep(2)
@@ -88,6 +94,7 @@ class createPlan(unittest.TestCase):
                 time.sleep(2)
                 driver.find_element_by_xpath("//*[@id='saveBtn']").click()
                 time.sleep(2)
+                
                 #返回列表删除计划
                 driver.find_element_by_xpath("//*[@id='go-back']").click()
                 time.sleep(2)
