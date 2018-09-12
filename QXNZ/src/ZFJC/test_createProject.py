@@ -37,7 +37,7 @@ class createProject(unittest.TestCase):
         # 获取当前窗口handle name
         current_window = driver.current_window_handle
         driver.find_element_by_xpath("//*[@id='firstmenu']/li[3]/a").click()
-        time.sleep(3)
+        time.sleep(5)
         driver.find_element_by_xpath("//*[@id='leftMenu']/li[3]/a").click()
         time.sleep(2)
         driver.find_element_by_xpath("//*[@id='leftMenu']/li[3]/ul/li[2]/a").click()

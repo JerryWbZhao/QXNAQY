@@ -13,7 +13,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 import unittest, time, re, os
 import HTMLTestRunner
-class createProject(unittest.TestCase):
+class manageProject(unittest.TestCase):
     def setUp(self):
         chromedriver = "C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe"
         os.environ["webdriver.chrome.driver"] = chromedriver
@@ -24,7 +24,7 @@ class createProject(unittest.TestCase):
         self.accept_next_alert = True
     
     #办理检查方案用例
-    def test_createProject(self):
+    def test_manageProject(self):
         u"""办理检查方案"""
         driver = self.driver
         driver.get(self.base_url + "/")
@@ -37,7 +37,7 @@ class createProject(unittest.TestCase):
         # 获取当前窗口handle name
         current_window = driver.current_window_handle
         driver.find_element_by_xpath("//*[@id='firstmenu']/li[3]/a").click()
-        time.sleep(3)
+        time.sleep(5)
         driver.find_element_by_xpath("//*[@id='leftMenu']/li[3]/a").click()
         time.sleep(2)
         driver.find_element_by_xpath("//*[@id='leftMenu']/li[3]/ul/li[2]/a").click()
@@ -85,5 +85,5 @@ class createProject(unittest.TestCase):
         
 if __name__ == "__main__":
     suite = unittest.TestSuite()
-    suite.addTest(createProject("test_createProject"))
+    suite.addTest(manageProject("test_manageProject"))
     results = unittest.TextTestRunner().run(suite)    
