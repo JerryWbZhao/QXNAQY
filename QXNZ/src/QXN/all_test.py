@@ -14,7 +14,7 @@ if __name__ == '__main__':
 # 所以我们加载所有单独的测试，这样将会提高脚本错误的确定。
     for test in alltestnames:
         try:
-            #最关键的就是这一句，循环执行数据数的里的用例。
+            #循环执行数据数的里的用例。
             suite.addTest(unittest.defaultTestLoader.loadTestsFromName(test))
         except Exception:
             print ('ERROR: Skipping tests from "%s".' % test)
