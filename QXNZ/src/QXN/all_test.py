@@ -28,7 +28,7 @@ if __name__ == '__main__':
             print_exc()
     print ('Running the tests...')
     
-filename = 'D:\\QXNZ_Result_20180911.html'
+filename = 'D:\\QXNZ_Result_20180913.html'
 fp = open(filename, 'wb')
 
 runner =HTMLTestRunner.HTMLTestRunner(
