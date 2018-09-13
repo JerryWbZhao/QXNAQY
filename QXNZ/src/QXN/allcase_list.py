@@ -18,11 +18,13 @@ def caselist():
     'ZFJC.test_createPlan.createPlan',
     'ZFJC.test_createProject.createProject',
     'ZFJC.test_manageProject.manageProject',
+    'ZFJC.test_createStaff.createStaff',
     'ZHZC.test_ZHZC1.ZHZC1',
     'ZHZC.test_ZHZC2.ZHZC2',
     'ZHZC.test_ZHZC3.ZHZC3',
     'ZHZC.test_ZHZC4.ZHZC4',
-    
+    'ZHZC.test_ZHZC1_1.ZHZC1_1',
+    'ZHZC.test_ZHZC1_2.ZHZC1_2',
     ]
     print ("read case list success!!")
     return alltestnames

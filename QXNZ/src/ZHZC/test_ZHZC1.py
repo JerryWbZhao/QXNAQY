@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 import unittest, time, re, os, random
 import HTMLTestRunner
-class ZHZC1(unittest.TestCase):
+class ZHZC1_1(unittest.TestCase):
     def setUp(self):
         chromedriver = "C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe"
         os.environ["webdriver.chrome.driver"] = chromedriver
@@ -22,7 +22,7 @@ class ZHZC1(unittest.TestCase):
         self.accept_next_alert = True
     
     #注册用例
-    def test_ZHZC1(self):
+    def test_ZHZC1_1(self):
         u"""生产经营单位注册"""
         driver = self.driver
         driver.get(self.base_url + "/")
@@ -32,18 +32,24 @@ class ZHZC1(unittest.TestCase):
         time.sleep(2)
         driver.find_element_by_xpath("//*[@id='btnList']/a[1]").click()
         time.sleep(2)
+        
         #搜索企业注册与否        
         s=random.randint(100000000000000000,999999999999999999)
         driver.find_element_by_xpath("/html/body/div/div[2]/div/div[1]/input").send_keys(s)
         driver.find_element_by_xpath("//*[@id='regSearch']").click()
         time.sleep(2)
-        driver.find_element_by_xpath("//*[@id='scroll-1']/table/tbody/tr[1]/td[2]/a").click()
+        
+        #选择上级单位注册
+        driver.find_element_by_xpath("//*[@id='scroll-1']/table/tbody/tr[2]/td[2]/a").click()
+        time.sleep(2)
+        driver.find_element_by_xpath("/html/body/div/div[2]/div/div[1]/input").send_keys("测试企业")
+        driver.find_element_by_xpath("//*[@id='regSearch']").click()
+        time.sleep(2)
+        driver.find_element_by_xpath("//*[@id='scroll-1']/table/tbody/tr[3]/td[4]/a").click()
+        time.sleep(2)
+        
         #填报第一步信息录入
-        driver.find_element_by_xpath("//*[@id='tab1']/div[1]/div/div/input[1]").send_keys(s)
-        time.sleep(2)
-        driver.find_element_by_xpath("//*[@id='fullName']").click()
-        time.sleep(2)
-        driver.find_element_by_xpath("//*[@id='fullName']").send_keys("生产经营单位注册")
+        driver.find_element_by_xpath("//*[@id='fullName']").send_keys("通过上级企业生产经营单位注册")
         driver.find_element_by_xpath("//*[@id='JGLX']/a").click()
         driver.find_element_by_xpath("//*[@id='JGLX']/ul/li[1]/a").click()
         driver.find_element_by_xpath("//*[@id='shortName']").send_keys("生产")
@@ -60,6 +66,7 @@ class ZHZC1(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='select2-results-4']").click()
         time.sleep(2)
         driver.find_element_by_xpath("//*[@id='submitButton']/a").click()
+        
         #填报第二步信息录入
         driver.find_element_by_xpath("//*[@id='userName']").send_keys(s)
         driver.find_element_by_xpath("//*[@id='tab2']/div/div[2]/div/div/input").send_keys("黔西南")
@@ -71,6 +78,7 @@ class ZHZC1(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='tab2']/div/div[8]/div/div/input").send_keys("123@qq.com")
         driver.find_element_by_xpath("//*[@id='submitButton']/a").click()
         time.sleep(2)
+        
         #填报第三步信息确认
         driver.find_element_by_xpath("//*[@id='submitButton']/a").click()
         time.sleep(2)      
@@ -83,5 +91,5 @@ class ZHZC1(unittest.TestCase):
         
 if __name__ == "__main__":
     suite = unittest.TestSuite()
-    suite.addTest(ZHZC1("test_ZHZC1"))
+    suite.addTest(ZHZC1_1("test_ZHZC1_1"))
     results = unittest.TextTestRunner().run(suite)    
