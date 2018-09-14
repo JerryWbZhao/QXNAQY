@@ -32,12 +32,14 @@ class ZHZC4(unittest.TestCase):
         time.sleep(2)
         driver.find_element_by_xpath("//*[@id='btnList']/a[4]").click()
         time.sleep(2)
+        
         #搜索企业注册与否        
         s=random.randint(100000000000000000,999999999999999999)
         driver.find_element_by_xpath("/html/body/div/div[2]/div/div[1]/input").send_keys(s)
         driver.find_element_by_xpath("//*[@id='regSearch']").click()
         time.sleep(2)
         driver.find_element_by_xpath("//*[@id='scroll-1']/table/tbody/tr[1]/td[2]/a").click()
+        
         #填报第一步信息录入
         driver.find_element_by_xpath("//*[@id='tab1']/div[1]/div/div/input[1]").send_keys(s)
         time.sleep(2)
@@ -60,6 +62,7 @@ class ZHZC4(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='select2-results-4']").click()
         time.sleep(2)
         driver.find_element_by_xpath("//*[@id='submitButton']/a").click()
+        
         #填报第二步信息录入
         driver.find_element_by_xpath("//*[@id='userName']").send_keys(s)
         driver.find_element_by_xpath("//*[@id='tab2']/div/div[2]/div/div/input").send_keys("黔西南")
@@ -71,6 +74,7 @@ class ZHZC4(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='tab2']/div/div[8]/div/div/input").send_keys("123@qq.com")
         driver.find_element_by_xpath("//*[@id='submitButton']/a").click()
         time.sleep(2)
+        
         #填报第三步信息确认
         driver.find_element_by_xpath("//*[@id='submitButton']/a").click()
         time.sleep(2)      

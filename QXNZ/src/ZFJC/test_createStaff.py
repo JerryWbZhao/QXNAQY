@@ -88,6 +88,8 @@ class createStaff(unittest.TestCase):
                 time.sleep(2)
                
                 #删除人员
+                driver.find_element_by_xpath("//*[@id='leftMenu']/li[9]/ul/li/a").click()
+                time.sleep(2)
                 driver.find_element_by_xpath("//*[@id='table_userinfo']/tbody/tr[5]/td[1]/input").click()
                 driver.find_element_by_xpath("//*[@id='container-viewer']/div[2]/div/div/div[1]/button[3]").click()
                 time.sleep(2)
