@@ -30,13 +30,15 @@ class Login(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='username']").send_keys("qxnzajj")
         driver.find_element_by_xpath("//*[@id='password']").send_keys("123456")
         driver.find_element_by_xpath("//*[@id='fm11']/button").click()
-        time.sleep(2)        
+        time.sleep(2)
+                
         try:
-        #是一个无法找到的元素id
+        #寻找是否存在该元素id
             driver.find_element_by_xpath("/html/body/div[1]/div/div[1]/a/img")
         except:
-            driver.get_screenshot_as_file("D:\\selenium_use_case\\error_png\\qxnz_login.png")
         #如果没有找到上面的元素就截取当前页面。
+            driver.get_screenshot_as_file("D:\\selenium_use_case\\error_png\\qxnz_login.png")
+        
         driver.close()
         
     def tearDown(self):
