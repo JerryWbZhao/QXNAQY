@@ -12,7 +12,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 import unittest, time, re, os, random, gc
 
-class ZHZC1(unittest.TestCase):
+class ZHZC1_1(unittest.TestCase):
     def setUp(self):
         chromedriver = "C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe"
         os.environ["webdriver.chrome.driver"] = chromedriver
@@ -23,7 +23,7 @@ class ZHZC1(unittest.TestCase):
         self.accept_next_alert = True
     
     #注册用例
-    def test_ZHZC1(self):
+    def test_ZHZC1_1(self):
         u"""通过上级单位进行生产经营单位注册"""
         driver = self.driver
         driver.get(self.base_url + "/")
@@ -90,5 +90,5 @@ class ZHZC1(unittest.TestCase):
         
 if __name__ == "__main__":
     suite = unittest.TestSuite()
-    suite.addTest(ZHZC1("test_ZHZC1"))
+    suite.addTest(ZHZC1_1("test_ZHZC1_1"))
     results = unittest.TextTestRunner().run(suite)    
