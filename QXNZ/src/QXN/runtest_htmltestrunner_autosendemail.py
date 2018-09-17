@@ -91,7 +91,8 @@ def send_email(newfile):
     smtp.sendmail(sender, receiver, msg.as_string())
     smtp.quit()
 
-if __name__=='__main__':   
+if __name__=='__main__':
+       
     print ('=====AutoTest Start======')
     #1)执行测试用例，生成最新的测试用例
     #指定测试用例为当前文件夹下的test_case目录
