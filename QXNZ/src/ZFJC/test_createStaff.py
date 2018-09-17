@@ -1,4 +1,5 @@
 #coding=utf-8
+
 '''
 Created on 2018年9月12日
 @author: Jerry
@@ -10,9 +11,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.action_chains import ActionChains
-
 import unittest, time, re, os
-import HTMLTestRunner
+
 class createStaff(unittest.TestCase):
     def setUp(self):
         chromedriver = "C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe"

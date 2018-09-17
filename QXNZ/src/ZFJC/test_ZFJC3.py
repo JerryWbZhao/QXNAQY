@@ -1,4 +1,5 @@
 #coding=utf-8
+
 '''
 Created on 2018年8月24日
 @author: Jerry
@@ -10,7 +11,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 import unittest, time, re, os
-import HTMLTestRunner
+
 class ZFJC3(unittest.TestCase):
     def setUp(self):
         chromedriver = "C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe"
@@ -37,6 +38,14 @@ class ZFJC3(unittest.TestCase):
         current_window = driver.current_window_handle
         driver.find_element_by_xpath("//*[@id='firstmenu']/li[3]/a").click()
         time.sleep(5)
+        
+        try:
+        #寻找是否存在该元素id
+            driver.find_element_by_xpath("//*[@id='leftMenu']/li[3]/a")
+        except:
+        #如果没有找到上面的元素就截取当前页面。
+            driver.get_screenshot_as_file("D:\\selenium_use_case\\error_png\\qxnz_ZFJC3.png")
+        
         driver.find_element_by_xpath("//*[@id='leftMenu']/li[3]/a").click()
         time.sleep(2)
         driver.find_element_by_xpath("//*[@id='leftMenu']/li[3]/ul/li[2]/a").click()

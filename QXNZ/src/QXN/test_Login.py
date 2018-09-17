@@ -1,4 +1,5 @@
 #coding=utf-8
+
 '''
 Created on 2018年8月24日
 @author: Jerry
@@ -10,7 +11,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 import unittest, time, re, os
-import HTMLTestRunner
+
 class Login(unittest.TestCase):
     def setUp(self):
         chromedriver = "C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe"

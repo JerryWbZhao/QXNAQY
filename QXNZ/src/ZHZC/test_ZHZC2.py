@@ -1,4 +1,5 @@
 #coding=utf-8
+
 '''
 Created on 2018年9月7日
 @author: Jerry
@@ -9,8 +10,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
-import unittest, time, re, os, random
-import HTMLTestRunner
+import unittest, time, re, os, random,gc
+
 class ZHZC2(unittest.TestCase):
     def setUp(self):
         chromedriver = "C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe"
@@ -79,6 +80,8 @@ class ZHZC2(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='submitButton']/a").click()
         time.sleep(2)      
         
+        del s
+        gc.collect()
         driver.close()
         
     def tearDown(self):

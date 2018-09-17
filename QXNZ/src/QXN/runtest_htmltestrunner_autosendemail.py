@@ -1,18 +1,17 @@
 # coding=utf-8
+
 '''
 Created on 2018-9-12
 @author: Jerry
 Project:整合自动发邮件功能，执行测试用例生成最新测试报告，取最新的测试报告，发送最新测试报告
 问题，邮件始终不能显示html：将电脑时间改为北京时间即可
 '''
-import unittest
+
 from HTMLTestRunner import HTMLTestRunner
-import time
-import os
-import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
+import unittest, time, os, smtplib
 
 #1.定义：取最新测试报告
 def new_file(test_dir):
