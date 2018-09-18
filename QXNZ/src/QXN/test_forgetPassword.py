@@ -36,9 +36,9 @@ class Forget(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='s2id_autogen1']/a").click()
         driver.implicitly_wait(30)
         driver.find_element_by_xpath("//*[@id='s2id_autogen2_search']").send_keys("应急组织测试")
-        time.sleep(5)
+        time.sleep(10)
         driver.find_element_by_xpath("//*[@id='select2-results-2']").click()
-        time.sleep(2)
+        driver.implicitly_wait(30)
         driver.find_element_by_xpath("//*[@id='startFindPass']").click()
         driver.implicitly_wait(30)
         
