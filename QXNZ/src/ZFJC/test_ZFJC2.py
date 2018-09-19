@@ -38,6 +38,8 @@ class ZFJC2(unittest.TestCase):
         current_window = driver.current_window_handle
         driver.find_element_by_xpath("//*[@id='firstmenu']/li[3]/a").click()
         time.sleep(5)
+        driver.refresh()
+        time.sleep(5)
         
         try:
         #寻找是否存在该元素id

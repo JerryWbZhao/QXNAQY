@@ -1,7 +1,7 @@
 #coding=utf-8
 
 '''
-Created on 2018年9月12日
+Created on 2018年9月7日
 @author: Jerry
 '''
 
@@ -24,7 +24,7 @@ class ZHZC1_1(unittest.TestCase):
     
     #注册用例
     def test_ZHZC1_1(self):
-        u"""通过上级单位进行生产经营单位注册"""
+        u"""通过上级企业进行生产经营单位注册"""
         driver = self.driver
         driver.get(self.base_url + "/")
         driver.implicitly_wait(30)
@@ -39,14 +39,18 @@ class ZHZC1_1(unittest.TestCase):
         driver.find_element_by_xpath("/html/body/div/div[2]/div/div[1]/input").send_keys(s)
         driver.find_element_by_xpath("//*[@id='regSearch']").click()
         time.sleep(2)
-        driver.find_element_by_xpath("//*[@id='scroll-1']/table/tbody/tr[1]/td[2]/a").click()
+        
+        #选择上级单位注册
+        driver.find_element_by_xpath("//*[@id='scroll-1']/table/tbody/tr[2]/td[2]/a").click()
+        time.sleep(2)
+        driver.find_element_by_xpath("/html/body/div/div[2]/div/div[1]/input").send_keys("测试企业")
+        driver.find_element_by_xpath("//*[@id='regSearch']").click()
+        time.sleep(2)
+        driver.find_element_by_xpath("//*[@id='scroll-1']/table/tbody/tr[3]/td[4]/a").click()
+        time.sleep(2)
         
         #填报第一步信息录入
-        driver.find_element_by_xpath("//*[@id='tab1']/div[1]/div/div/input[1]").send_keys(s)
-        time.sleep(2)
-        driver.find_element_by_xpath("//*[@id='fullName']").click()
-        time.sleep(2)
-        driver.find_element_by_xpath("//*[@id='fullName']").send_keys("生产经营单位注册")
+        driver.find_element_by_xpath("//*[@id='fullName']").send_keys("通过上级企业进行生产经营单位注册")
         driver.find_element_by_xpath("//*[@id='JGLX']/a").click()
         driver.find_element_by_xpath("//*[@id='JGLX']/ul/li[1]/a").click()
         driver.find_element_by_xpath("//*[@id='shortName']").send_keys("生产")

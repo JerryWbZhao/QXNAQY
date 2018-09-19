@@ -28,6 +28,7 @@ class Login(unittest.TestCase):
         driver = self.driver
         driver.get(self.base_url + "/")
         driver.implicitly_wait(30)
+        driver.maximize_window()
         driver.find_element_by_xpath("//*[@id='username']").send_keys("qxnzajj")
         driver.find_element_by_xpath("//*[@id='password']").send_keys("123456")
         driver.find_element_by_xpath("//*[@id='fm11']/button").click()
