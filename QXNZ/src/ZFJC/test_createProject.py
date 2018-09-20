@@ -126,7 +126,7 @@ class createProject(unittest.TestCase):
                 time.sleep(2)
                 
                 #审核通过
-                driver.find_element_by_xpath("//*[@id='table_xczfjh']/tbody/tr[1]/td[7]/a").click()
+                driver.find_element_by_xpath("//*[@id='table_xczfjh']/tbody/tr[1]/td[8]/a").click()
                 time.sleep(2)
                 driver.find_element_by_xpath("//*[@id='spr']").send_keys("张阳")
                 driver.find_element_by_xpath("//*[@id='agree']").click()
