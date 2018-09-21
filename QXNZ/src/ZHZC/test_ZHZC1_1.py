@@ -47,9 +47,11 @@ class ZHZC1_1(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='regSearch']").click()
         time.sleep(2)
         driver.find_element_by_xpath("//*[@id='scroll-1']/table/tbody/tr[2]/td[4]/a").click()
-        time.sleep(2)
+        time.sleep(3)
         
         #填报第一步信息录入
+        driver.find_element_by_xpath("//*[@id='fullName']").click()
+        time.sleep(2)
         driver.find_element_by_xpath("//*[@id='fullName']").send_keys("通过上级企业进行生产经营单位注册")
         
         #选择监管类型

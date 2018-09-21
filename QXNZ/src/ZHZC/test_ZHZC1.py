@@ -40,6 +40,7 @@ class ZHZC1(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='regSearch']").click()
         time.sleep(2)
         driver.find_element_by_xpath("//*[@id='scroll-1']/table/tbody/tr[1]/td[2]/a").click()
+        time.sleep(2)
         
         #填报第一步信息录入
         driver.find_element_by_xpath("//*[@id='tab1']/div[1]/div/div/input[1]").send_keys(s)
