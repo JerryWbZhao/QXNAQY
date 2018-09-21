@@ -53,6 +53,7 @@ class ZHZC1(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='contact']").send_keys("单位法人")
         driver.find_element_by_xpath("//*[@id='telephone']").send_keys("13000000000")
         
+        
         sel1 = driver.find_element_by_xpath("//*[@id='qyxzqh1']")
         Select(sel1).select_by_value('522300000000')
         sel2 = driver.find_element_by_xpath("//*[@id='qyxzqh2']")
