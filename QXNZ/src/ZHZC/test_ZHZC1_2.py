@@ -39,7 +39,7 @@ class ZHZC1_2(unittest.TestCase):
         driver.find_element_by_xpath("/html/body/div/div[2]/div/div[1]/input").send_keys("测试企业")
         driver.find_element_by_xpath("//*[@id='regSearch']").click()
         time.sleep(2)
-        driver.find_element_by_xpath("//*[@id='scroll-1']/table/tbody/tr[3]/td[4]/a").click()
+        driver.find_element_by_xpath("//*[@id='scroll-1']/table/tbody/tr[2]/td[4]/a").click()
         time.sleep(2)
         
         #填报第二步信息录入
