@@ -51,6 +51,7 @@ class ZHZC1(unittest.TestCase):
         #选择监管类型
         driver.find_element_by_xpath("//*[@id='JGLX']/a").click()
         driver.find_element_by_xpath("//*[@id='JGLX']/ul/li[1]/a").click()
+        
         driver.find_element_by_xpath("//*[@id='shortName']").send_keys("生产")
         driver.find_element_by_xpath("//*[@id='contact']").send_keys("单位法人")
         driver.find_element_by_xpath("//*[@id='telephone']").send_keys("13000000000")
