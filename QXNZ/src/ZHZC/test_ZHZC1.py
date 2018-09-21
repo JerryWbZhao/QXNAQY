@@ -47,22 +47,33 @@ class ZHZC1(unittest.TestCase):
         driver.find_element_by_xpath("//*[@id='fullName']").click()
         time.sleep(2)
         driver.find_element_by_xpath("//*[@id='fullName']").send_keys("生产经营单位注册")
+        
+        #选择监管类型
         driver.find_element_by_xpath("//*[@id='JGLX']/a").click()
         driver.find_element_by_xpath("//*[@id='JGLX']/ul/li[1]/a").click()
         driver.find_element_by_xpath("//*[@id='shortName']").send_keys("生产")
         driver.find_element_by_xpath("//*[@id='contact']").send_keys("单位法人")
         driver.find_element_by_xpath("//*[@id='telephone']").send_keys("13000000000")
         
+        #选择行业分类
+        sel1 = driver.find_element_by_xpath("//*[@id='tab1']/div[8]/div/div/div/div[1]/select")
+        Select(sel1).select_by_value('A')
+        sel2 = driver.find_element_by_xpath("//*[@id='tab1']/div[8]/div/div/div/div[2]/select")
+        Select(sel2).select_by_value('01')
+        sel3 = driver.find_element_by_xpath("//*[@id='tab1']/div[8]/div/div/div/div[3]/select")
+        Select(sel3).select_by_value('011')
+        sel4 = driver.find_element_by_xpath("//*[@id='tab1']/div[8]/div/div/div/div[4]/select")
+        Select(sel4).select_by_value('0111')
         
-        sel1 = driver.find_element_by_xpath("//*[@id='qyxzqh1']")
-        Select(sel1).select_by_value('522300000000')
-        sel2 = driver.find_element_by_xpath("//*[@id='qyxzqh2']")
-        Select(sel2).select_by_value('522301000000')
-        sel3 = driver.find_element_by_xpath("//*[@id='qyxzqh3']")
-        Select(sel3).select_by_value('522301001000')
-        driver.find_element_by_xpath("//*[@id='tab1']/div[9]/div/div/input").send_keys("黔西南")
-        driver.find_element_by_xpath("//*[@id='select2-chosen-4']").click()
-        driver.find_element_by_xpath("//*[@id='select2-results-4']").click()
+        #选择所在地区
+        sel5 = driver.find_element_by_xpath("//*[@id='qyxzqh1']")
+        Select(sel5).select_by_value('522300000000')
+        sel6 = driver.find_element_by_xpath("//*[@id='qyxzqh2']")
+        Select(sel6).select_by_value('522301000000')
+        sel7 = driver.find_element_by_xpath("//*[@id='qyxzqh3']")
+        Select(sel7).select_by_value('522301001000')
+        
+        driver.find_element_by_xpath("//*[@id='tab1']/div[10]/div/div/input").send_keys("黔西南")
         time.sleep(2)
         driver.find_element_by_xpath("//*[@id='submitButton']/a").click()
         
