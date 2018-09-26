@@ -74,16 +74,22 @@ class createStaff(unittest.TestCase):
                 time.sleep(2)
                 driver.find_element_by_xpath("//*[@id='ajzfUserinfoFrom']/div/div[6]/div/div/input").click()
                 driver.implicitly_wait(30)
+                
+                #选择日期
                 driver.find_element_by_xpath("/html/body/div[3]/div[2]/div[2]/div[1]/table/tbody/tr[1]/td[7]").click()
                 driver.implicitly_wait(30)
                 driver.find_element_by_xpath("//*[@id='ajzfUserinfoFrom']/div/div[7]/div/input").send_keys("黔西南州安监局")
                 driver.implicitly_wait(30)
                 driver.find_element_by_xpath("//*[@id='yxqQsrqStr']/input").click()
                 driver.implicitly_wait(30)
+                
+                #选择日期
                 driver.find_element_by_xpath("/html/body/div[3]/div[2]/div[2]/div[1]/table/tbody/tr[1]/td[7]").click()
                 driver.implicitly_wait(30)
                 driver.find_element_by_xpath("//*[@id='yxqJzrqStr']/input").click()
                 driver.implicitly_wait(30)
+                
+                #选择日期
                 driver.find_element_by_xpath("/html/body/div[3]/div[2]/div[2]/div[1]/table/tbody/tr[1]/td[7]").click()                
                 driver.implicitly_wait(30)
                 driver.find_element_by_xpath("//*[@id='addBtn']").click()
